@@ -11,8 +11,7 @@ export const UserRegister = async (req, resizeBy, next) => {
     }
 
     console.log(fullName, email, mobileNumber, password);
-
-    //-------- check for duplicate user before registration--------------
+//-------- check for duplicate user before registration--------------
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
